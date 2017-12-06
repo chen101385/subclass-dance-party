@@ -22,12 +22,11 @@ $(document).ready(function() {
     // make a dancer with a random position
     //ATTENTION:  pseudoclassical refactor
     
-    var max = Math.random() * .8;
-    var min = Math.random() * .2;
+   
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").height() * Math.random(),
-      Math.random() * 10000
+      Math.random() * 2500
     );
     $('body').append(dancer.$node);
 
