@@ -15,11 +15,11 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   //   // other effects you can use on a jQuery-wrapped html tag.
   //   this.$node.toggle();
   // };
-  
+  MakeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.prepend('<img src="images/chris.gif" alt="farley dancer" height="120" width="50">');
 
 
   //this.oldStep = MakeDancer.prototype.step;
-  MakeDancer.call(this, top, left, timeBetweenSteps);
 
 
   

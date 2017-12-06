@@ -21,10 +21,13 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     //ATTENTION:  pseudoclassical refactor
+    
+    var max = Math.random() * .8;
+    var min = Math.random() * .2;
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+      $("body").height() * Math.random(),
+      Math.random() * 10000
     );
     $('body').append(dancer.$node);
 
@@ -41,10 +44,11 @@ $('.addDancerButton1').on('click', function(event) {
 
     // make a dancer with a random position
     //ATTENTION:  pseudoclassical refactor
+
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000000
+      Math.random() * $("body").height(),
+      Math.random() * $("body").height(),
+      Math.random() * 1000
     );
     $('body').append(dancer.$node);
 
@@ -60,8 +64,8 @@ $('.addDancerButton2').on('click', function(event) {
     // make a dancer with a random position
     //ATTENTION:  pseudoclassical refactor
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      Math.random() * $("body").height(),
+      Math.random() * $("body").height(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);

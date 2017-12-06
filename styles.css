@@ -23,9 +23,11 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:2px solid red;
   border-radius:10px;
   position:absolute;
+  animation-duration: 2s;
+  animation-name: slidein;
 }
 
 .dancer1{
@@ -33,7 +35,8 @@ body, a:link, a:visited, a:active{
   border-radius:5px;
   position:absolute;
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-name: sway;
 }
 
 .dancer2{
@@ -41,7 +44,8 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
   animation-duration: 3s;
-  animation-name: infinite-spinning;
+  animation-iteration-count: infinite;
+  animation-name: zoom-in;
 }
 
 .newStep{
@@ -53,23 +57,32 @@ body, a:link, a:visited, a:active{
 @keyframes slidein {
   from {
   margin-left: 100%;
-  width: 50%;
 }
 
   to {
   margin-left: 0%;
-  width: 50%;
-
   }
 }
 
-@keyframes infinite-spinning {
-  from {
-    transform: rotate(0deg);
+@keyframes sway {
+   from {
+  transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
   }
 }
+
+@keyframes zoom-in {
+  from {
+    transform: scale(1.0);
+  }
+  to {
+    transform: scale(2.0);
+  }
+
+}
+
+
 
 

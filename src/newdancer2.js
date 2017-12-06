@@ -4,7 +4,7 @@ var MakeNewDancer2 = function(top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
-
+  this.$node.prepend('<img src="images/mickey.jpg" alt="mickey dancer" height="100" width="40">');
 };
 
 
@@ -17,5 +17,5 @@ MakeNewDancer2.prototype.step = function() {
     this.$node.removeClass("dancer");
     this.$node.addClass("dancer2");
     //this.$node.toggle();
-    this.$node.prepend('<img src="images/mickey.jpg" alt="mickey dancer" height="60" width="30">');
+    //this.$node.prepend('<img src="images/mickey.jpg" alt="mickey dancer" height="60" width="30">');
   };
